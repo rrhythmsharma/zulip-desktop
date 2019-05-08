@@ -103,3 +103,9 @@ document.addEventListener('keydown', event => {
 		ipcRenderer.send('forward-message', 'zoomActualSize');
 	}
 });
+
+window.addEventListener('keydown', e =>{
+	if(e.keyCode === 32 || e.code === 'space') {
+		SetupSpellChecker.init(document.getElementById('compose-textarea').value);
+	}
+});
